@@ -1,8 +1,19 @@
-﻿@{
+﻿@model IEnumerable<ShoeViewModel>
+
+@{
     ViewData["Title"] = "Home Page";
+}
+
+@Html.ActionLink("Create New", "Create", "Home");
+@foreach(var item in Model)
+{
+    <div class="mb-3">
+    @Html.DisplayFor(modelItem => item.ShoeName)
+    <a href="@Url.Action("Edit", "Home", new {id = item.ShoeId})">Edit</a>
+    </div>
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p></p>
 </div>
