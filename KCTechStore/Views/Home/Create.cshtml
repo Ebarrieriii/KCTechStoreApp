@@ -1,0 +1,52 @@
+﻿@model ShoeViewModel
+
+
+<h1 style="text-align: center;">Create Shoe</h1>
+@using (Html.BeginForm("Create", "Home", FormMethod.Post))
+{
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-floating mb-3">
+                @Html.TextBoxFor(m => m.ShoeName, null, new { @class = "form-control", @id = "floatingInput"})
+                <label for="floatingInput">Shoe Name</label>
+            </div>
+            <div class="form-floating mb-3">
+                <label for="floatingPassword">Size ID</label>
+            </div>
+            <div class="form-floating mb-3">
+                               @Html.TextBoxFor(m => m.Price, null, new { @class = "form-control", @id = "floatingInput"})
+                <label for="floatingPassword">Price</label>
+            </div>
+            <div class="form-floating mb-3">
+                                @Html.TextBoxFor(m => m.Description, null, new { @class = "form-control", @id = "floatingInput"})
+                <label for="floatingPassword">Description</label>
+            </div>
+
+        </div>
+
+
+        <div class="col-md-6">
+            <div class="form-floating mb-3">
+                                @Html.TextBoxFor(m => m.Quantity, null, new { @class = "form-control", @id = "floatingInput"})
+                <label for="floatingPassword">Quantity</label>
+            </div>
+            <div class="form-floating mb-3">
+                               @Html.TextBoxFor(m => m.IsInStock, null, new { @class = "form-control", @id = "floatingInput"})
+                <label for="floatingPassword">In stock?</label>
+            </div>
+            <div class="form-floating mb-3">
+                                @Html.TextBoxFor(m => m.ShoePhoto, null, new { @class = "form-control", @id = "floatingInput"})
+                <label for="floatingPassword">Photo</label>
+            </div>
+            <div class="form-floating mb-3">
+                                @Html.TextBoxFor(m => m.Condition, null, new { @class = "form-control", @id = "floatingInput"})
+                <label for="floatingPassword">Condition</label>
+            </div>
+        </div>
+
+    </div>
+        <input id="Submit" type="submit" value="Submit" class="btn btn-primary"/>
+
+}
+
+
